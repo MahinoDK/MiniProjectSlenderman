@@ -1,4 +1,79 @@
-# MiniProjectSlenderman
+# Slenderman – Survival Horror Game
+
+## Gameplay Demo
+
+https://youtu.be/rw10chS4nZw
+
+## Screenshots
+
+<img width="720" alt="Design uden navn" src="https://github.com/user-attachments/assets/1ce002e4-0068-43f8-8c7f-dc5c44a4ff17" />
+
+
+A first-person survival horror game developed in Unity using C#. Inspired by Slender: The Eight Pages, the player must explore a dark environment and collect eight unique pages while avoiding an increasingly aggressive enemy.
+
+The project explores adaptive enemy behaviour, randomized gameplay, environmental storytelling and immersive horror mechanics.
+
+## Key Features
+
+- First-person movement with sprinting and smooth camera zoom.
+- Adaptive enemy AI based on player progression.
+- Randomized placement of eight unique pages across 15 possible spawn locations.
+- Proximity and field-of-view-based enemy detection.
+- Dynamic health drain and regeneration system.
+- Interactive flashlight with smooth sprint-based rotation.
+- Environmental audio, dynamic footstep sounds and flickering lights.
+- Cinematic death sequence with camera interpolation, visual effects and UI transitions.
+
+## Enemy AI & Adaptive Difficulty
+
+Slenderman's behaviour is controlled by a probability-based AI system that dynamically adjusts its parameters according to the player's progression.
+
+As more pages are collected:
+
+- Teleportation cooldown decreases.
+- Teleportation distance decreases.
+- Probability of teleporting near the player increases.
+- Player health drain becomes more aggressive.
+
+The enemy continuously rotates towards the player and uses distance and angular calculations to determine when to activate the camera static effect. Teleportation is paused during active encounters to maintain tension.
+
+## Randomized Gameplay
+
+Eight visually distinct page prefabs are distributed across 15 predefined spawn locations at the beginning of each playthrough.
+
+The spawning algorithm uses randomized selection without replacement, ensuring that each page appears once and that no spawn point is selected twice.
+
+This creates variation between playthroughs and encourages exploration.
+
+## Technical Implementation
+
+| Component | Functionality |
+|---|---|
+| Slenderman | Enemy AI, probabilistic teleportation and adaptive difficulty |
+| GameLogic | Game state management, randomized spawning and death sequence |
+| PlayerMovement | First-person controls, sprinting, camera zoom and movement audio |
+| CollectPage | Collider-based interaction and progression tracking |
+| PickUpText | Interaction prompts and audio feedback |
+| FlashLight | Light controls and interpolated rotation |
+| MessageDisplay | UI management and coroutine-based fade transitions |
+
+## Technologies & Programming Concepts
+
+- Unity Engine
+- C#
+- Universal Render Pipeline (URP)
+- Unity Visual Effect Graph
+- TextMeshPro
+- Object-oriented programming
+- Probability-based decision-making
+- Dynamic difficulty adjustment
+- Vector mathematics and quaternion rotation
+- Coroutines and interpolation
+- Collider-based interaction
+- Singleton-style component access
+
+
+# Inital Commit: MiniProjectSlenderman
 Mini Project
 I wanted to make a game like slenderman because i loved it growing up, and later realised it was made by unity. I thought it doable and wanted to try and make it myself. I then made a to do list to make it in unity, and updated it along the way.
 
